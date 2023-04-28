@@ -6,6 +6,7 @@ Widget defaultTextFormField({
   required textInputType,
   required isPassword,
   function,
+  onSave,
   required controller,
   required label,
   labelColor,
@@ -35,6 +36,7 @@ Widget defaultTextFormField({
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextFormField(
+          onSaved: onSave,
           obscureText: isPassword,
           keyboardType:textInputType ,
           initialValue: initValue,
